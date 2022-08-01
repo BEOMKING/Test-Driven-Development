@@ -3,8 +3,7 @@ package com.practice.tdd.domain;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class DollarTest {
 
@@ -18,7 +17,7 @@ public class DollarTest {
 
     @Test
     void testEquality() {
-        assertTrue(new Dollar(5).equals(new Dollar(5)));
-        assertFalse(new Dollar(5).equals(new Dollar(6)));
+        assertEquals(new Dollar(5), new Dollar(5));
+        assertNotEquals(new Dollar(5), new Dollar(6));
     }
 }
